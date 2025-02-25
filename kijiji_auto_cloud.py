@@ -47,12 +47,12 @@ def clean_price(price_str):
         cleaned_price = price_str.replace('\xa0', '').replace('$', '').replace('*', '').strip()
         return int(cleaned_price.replace(',', ''))
     except ValueError:
-        return 0  # Return 0 if there's an error in conversion
+        return 0
 
 
 def send_email(subject, body, recipient_email):
-    sender_email = 'your sender email'
-    sender_password = 'Use an app password if 2FA is enabled or the less secure password on gmail'
+    sender_email = 'cheapflight819@gmail.com'
+    sender_password = 'plfz qtml eeui ssvy'  # Use an app password if 2FA is enabled
 
     msg = MIMEText(body)
     msg['Subject'] = subject
@@ -82,5 +82,5 @@ url += '#ms=11000%3B5&od=down&sb=ct'
 
 #print(url)
 #print(get_car_listings(url))
-recipient_email = 'recipient email'
+recipient_email = 'aymenzebentout@gmail.com'
 monitor_cars(url, recipient_email)
