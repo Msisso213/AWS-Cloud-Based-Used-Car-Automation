@@ -47,7 +47,7 @@ def clean_price(price_str):
         cleaned_price = price_str.replace('\xa0', '').replace('$', '').replace('*', '').strip()
         return int(cleaned_price.replace(',', ''))
     except ValueError:
-        return 0  # Return 0 if there's an error in conversion
+        return 0
 
 
 def send_email(subject, body, recipient_email):
